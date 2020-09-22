@@ -1,1 +1,1 @@
-Here you will find the course resources
+Here you will find the course resources.
