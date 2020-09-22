@@ -1,1 +1,1 @@
-"# frontend-grupa17" 
+Here you will find the course resources
