@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My CV</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h3>My CV</h3>
+        <a href="#experience" style="font-size: 20px; margin-right: 10px;">Experience</a>
+        <a href="./#contact" style="font-size: 20px; margin-right: 10px;">Contact</a>
+        <a href="./about.html" style="font-size: 20px; margin-right: 10px;">About</a>
+    </header>
+    <br>
+
+    <div id="info">
+        <img src="./photo.jpg" style="width: 200px; height: 200px;">
+        <ul style="display: inline-block;">
+            <li>Name:
+                <span style="color: grey;">
+                    <b>Henrietta Szekely</b>
+                </span>
+            </li>
+            <li>Email:
+                <a href="mailto:henrietta.szekely@scoalainformala.ro">henrietta.szekely@scoalainformala.ro</a>
+            </li>
+            <li>
+                Github: <a href="https://github.com/henriettaszekely" target="_blank">github.com/henriettaszekely</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="experience">
+        <h2>Experience</h2>
+        <table>
+            <tr>
+                <td>Year</td>
+                <td>Company</td>
+                <td>Position</td>
+            </tr>
+            <tr style="border-top: 1px solid grey">
+                <td>2018</td>
+                <td>Connatix</td>
+                <td>Developer</td>
+            </tr>
+            <tr style="border-top: 1px solid grey">
+                <td>2016</td>
+                <td>Fortech</td>
+                <td>Developer</td>
+            </tr>
+            <tr style="border-top: 1px solid grey">
+                <td>2014</td>
+                <td>LinkScreens</td>
+                <td>Developer</td>
+            </tr>
+        </table>
+    </div>
+    <div id="contact">
+        <h2>Contact me</h2>
+        <form>
+            <label>Name</label>
+            <input name="name">
+            <br>
+
+            <label>Message</label>
+            <textarea></textarea>
+            <br>
+
+            <input type="submit" value="Submit!">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</body>
+
+</html>

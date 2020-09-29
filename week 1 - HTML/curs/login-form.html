@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login form</title>
+</head>
+
+<body>
+    <form action="login-results.html" method="GET">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required value="Name">
+        </div>
+        </br>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        </br>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="1" max="99">
+        </div>
+        </br>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        </br>
+        <div>
+            <div>Occupation</div>
+            <div>
+                <label><input type="checkbox" name="occupation" value="student">Student</label>
+            </div>
+
+            <div>
+                <label><input type="checkbox" name="occupation" value="worker">Worker</label>
+            </div>
+        </div>
+        </br>
+        <div>
+            <div>Gender</div>
+            <div>
+                <label><input type="radio" name="gender" value="male">Male</label>
+            </div>
+
+            <div>
+                <label><input type="radio" name="gender" value="female">Female</label>
+            </div>
+        </div>
+        </br>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

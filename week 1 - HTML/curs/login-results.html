@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login results</title>
+</head>
+
+<body>
+    <h4>Results</h4>
+    <div id="results"></div>
+
+
+    <script>
+        const resultsList = document.getElementById("results");
+        // getting the results from the url
+        new URLSearchParams(window.location.search).forEach((value, key) => {
+            resultsList.append(`${key} : ${value}`);
+            resultsList.append(document.createElement('br'));
+        })
+    </script>
+
+</body>
+
+</html>
