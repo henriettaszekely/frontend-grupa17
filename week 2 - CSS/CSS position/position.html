@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>CSS Positioning Examples</title>
+    <link rel="stylesheet" href="position.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="example_1">
+            <code>position: absolute;
+                left: 20px;
+                top: 20px;
+            </code>
+            <p>The only containing element for this div is the main window, so it positions itself in relation to it.
+            </p>
+        </div>
+
+        <div id="example_2">
+            <code>position: relative;
+                top: 0;
+                right: 0;
+            </code>
+            <p>Relative positions itself in relation to its siblings.</p>
+        </div>
+
+        <div id="example_3">
+            <code>float: right;
+                position: relative;
+                top: 20px;
+                left: 20px;
+            </code>
+            <p>Relative to its sibling div above, but removed from flow of content.</p>
+
+            <div id="example_4">
+                <code>
+                    position: absolute;
+                    top: 10px;
+                    left: 20px;
+                </code>
+                <p>Absolute position inside of a parent with relative position</p>
+            </div>
+        </div>
+
+        <div id="example_5">
+            <code>position: fixed;
+                top: 0;
+                right: 0;
+            </code>
+            <p>Relative positions to the browser window</p>
+        </div>
+    </div>
+</body>
+
+</html>
