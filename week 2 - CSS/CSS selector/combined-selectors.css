@@ -1,0 +1,45 @@
+/* Universal selector: * - select all the elements */
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Descendant selector: space - select an element nested somewhere inside another element 
+   x y - Selects all y elements inside x elements
+*/
+div p {
+    font-weight: bold;
+}
+
+
+/* Child selector: > - select an element that is the immediate children of another element
+   x > y - Selects all y elements where the parent is an x element */
+
+p>a {
+    text-transform: uppercase;
+}
+
+
+/*  Descendent selector: + - select an element that is an immediate sibling of another element 
+    x + y - Selects all y elements that are placed immediately after x elements */
+p+a {
+    background-color: grey;
+}
+
+
+/* Child selector: ~ - select any elements that are siblings of another element 
+   x ~ y - Selects every y element that are on the same level in the hierarchy with an x element */
+
+div~p {
+    color: blue;
+}
+
+/* Multiple Selectors  - diferent selectors separated by commas with the same rule 
+    x, y, z { } - the same rules are applyed on each element */
+
+div,
+p,
+a {
+    margin-bottom: 10px;
+}

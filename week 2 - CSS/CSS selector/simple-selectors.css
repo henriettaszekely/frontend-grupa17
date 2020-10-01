@@ -1,0 +1,17 @@
+/* Id selector - #id_name  */
+
+#container {
+    background-color: lightgray;
+}
+
+/* Class selector - .class_name */
+
+.red {
+    color: red;
+}
+
+/* Tag name selector - tag_name */
+
+a {
+    color: green;
+}
