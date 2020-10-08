@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Nunito;
+    src: url(./Nunito/Nunito-Regular.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    font-family: Nunito;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 5px solid #29CA8E;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+    height: 70px;
+    padding: 0 200px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 1px 10px;
+}
+
+ul li a {
+    line-height: 70px;
+}
+
+ul li:hover {
+    background-color: #29CA8E;
+    color: white;
+}
+
+ul li:hover a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #717171;
+}
+
+.logo {
+    color: black;
+    font-weight: 600;
+}
+
+.phone-number a {
+    color: #717171;
+}
+
+span.fa-phone {
+    color: white;
+    background-color: #29CA8E;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 25px;
+    text-align: center;
+}
