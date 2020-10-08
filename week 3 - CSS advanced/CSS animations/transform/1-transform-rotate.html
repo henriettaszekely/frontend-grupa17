@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        div#rotate {
+            /*  Chrome and Safari */
+            -webkit-transform: rotate(20deg);
+            /* IE 9 */
+            -ms-transform: rotate(20deg);
+            /* Standard Syntax */
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        This a normal div element.
+    </div>
+
+    <div id="rotate">
+        This div element is rotated clockwise 20 degrees.
+    </div>
+
+</body>
+
+</html>

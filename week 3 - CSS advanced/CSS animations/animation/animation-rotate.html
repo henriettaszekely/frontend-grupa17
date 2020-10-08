@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate animation</title>
+    <style>
+        .element {
+            display: inline-block;
+            background-color: #0074d9;
+            height: 100px;
+            width: 100px;
+            margin-right: 15px;
+            margin-left: 15px;
+            opacity: .7;
+
+            /* @keyframes | duration | timing-function | delay | iteration-count */
+            animation: roll 3s ease 2s infinite;
+        }
+
+        @keyframes roll {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="element">
+    </div>
+    <div class="element">
+    </div>
+    <div class="element">
+    </div>
+
+</body>
+
+</html>
