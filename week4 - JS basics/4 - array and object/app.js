@@ -1,17 +1,18 @@
 // array
-var name = ['John', 'Doe'];
+var emptyArray = [];
+var name = ['John', 'Doe', "Maria"];
 var name2 = new Array('Jane', 'Done');
 
 var listOfNumbers = [1, 3, 56, 89, 34, 10, 45];
 
 console.log("listOfNumber:", listOfNumbers);
-console.log("Firt item of list: ", listOfNumbers[0]);
+console.log("Firt item of array:", listOfNumbers[0]);
 console.log("Length of the array:", listOfNumbers.length);
+console.log("Last item of the array:", listOfNumbers[listOfNumbers.length - 1]);
 
 var age = 25;
 var isMen = true;
 var list = [name, age, isMen, 10, 9, 8, 7];
-
 
 // object
 var emptyObject = {};
@@ -38,6 +39,7 @@ var student = {
 };
 
 console.log("student: ", student);
-
+console.log("student name: ", student.name);
+console.log("student media: ", student.media());
 
 

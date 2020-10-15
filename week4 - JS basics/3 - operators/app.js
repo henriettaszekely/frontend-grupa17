@@ -32,7 +32,7 @@ console.log("10 == '10' => ", 10 == '10');
 console.log("10 === '10' =>", 10 === '10');
 
 // Not equal
-console.log("Equal: != and !==");
+console.log("Not equal: != and !==");
 console.log("10 !=  10 =>", 10 != 10);
 console.log("10 !== 10 =>", 10 !== 10);
 console.log("10 != '10' => ", 10 != '10');
