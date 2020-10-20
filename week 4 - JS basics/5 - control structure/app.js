@@ -1,10 +1,12 @@
 // if
 var isMen = true;
+
 if (isMen) {
   console.log('is a male');
 } else {
   console.log('is a female');
 }
+
 
 // switch
 var numberOfDay = new Date().getDay();
@@ -44,17 +46,17 @@ while (count < 10) {
   count++;
 };
 
-document.write("While loop stopped!");
+document.write("While loop stopped!<br>");
 
 // for
-for (var index = 0; index < 10; index = index + 1) {
-  console.log(index)
+for (var index = 0; index <= 10; index++) {
+  console.log(index);
 };
 
 var cars = ["BMW", "Volvo", "Saab", "Ford"];
-var i;
-for (i = 0, len = cars.length, text = ""; i < len; i++) {
-  text += cars[i] + "<br>";
+
+for (var i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + " "; // text += cars[i] => text = text + cars[i]
 }
 
 document.write(text);
