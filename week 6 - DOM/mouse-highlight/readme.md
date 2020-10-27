@@ -1,0 +1,1 @@
+Write the code that will highlight the bold words from a given paragraph when you hover the mouse over an element, and remove the highlight when the mouse is not over the given element.
