@@ -15,7 +15,7 @@ ul {
     flex-wrap: wrap;
 }
 
-li {
+.day {
     width: calc(100%/7);
     box-sizing: border-box;
     border: 2px solid white;

@@ -39,6 +39,7 @@ window.addEventListener("load", function () {
     //add the event listener for mouse enter and mouse leave events
     var hover = document.getElementById("hover");
     var hoverClass = document.getElementsByClassName("info");
+
     hover.addEventListener("mouseenter", addHighlightClass);
     hoverClass[0].addEventListener("mouseleave", removeHighlightClass);
 });
