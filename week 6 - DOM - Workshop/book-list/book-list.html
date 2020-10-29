@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Book List</title>
+    <link rel="stylesheet" type="text/css" href="book-list.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <section id="bookList">
+            <h1>Book list</h1>
+        </section>
+
+        <section>
+            <div id="newBook" class="new-book">
+                <h1>Add new book</h1>
+                <form>
+                    <div>
+                        <label for="bookTitle">Title</label>
+                        <input type="text" name="title" id="bookTitle" placeholder="New book title">
+                    </div>
+                    <div>
+                        <label for="bookAuthor">Author</label>
+                        <input type="text" name="author" id="bookAuthor" placeholder="New book author">
+                    </div>
+                    <div>
+                        <button id="addNewBook" type="button">Add new book</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="book-list.js"></script>
+
+</body>
+
+</html>
