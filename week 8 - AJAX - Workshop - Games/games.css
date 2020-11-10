@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #707070;
+    color: white;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #EDEDED;
+    margin-top: 80px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-card {
+    width: 800px;
+    display: flex;
+    margin: 10px 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+}
+
+img {
+    width: 300px;
+}
+
+.game-info {
+    padding: 10px;
+}
+
+.game-info h3 {
+    color: #FFDF6C;
+    margin: 5px 0;
+}
+
+.game-info p {
+    font-size: 14px;
+}
