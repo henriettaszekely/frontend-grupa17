@@ -72,9 +72,7 @@ const person = {
     name: 'Jhon',
     age: 30,
     role: 'developer',
-    sayHello: function () {
-        console.log(`Hello ${this.name}`);
-    }
+    sayHello: () => console.log(`Hello ${this.name}`)
 }
 
 console.log(person.name);

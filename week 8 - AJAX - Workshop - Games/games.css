@@ -28,6 +28,7 @@ main {
 .game-card {
     width: 800px;
     display: flex;
+    align-items: flex-start;
     margin: 10px 0;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -41,6 +42,7 @@ img {
 
 .game-info {
     padding: 10px;
+    flex-grow: 2;
 }
 
 .game-info h3 {
@@ -50,4 +52,13 @@ img {
 
 .game-info p {
     font-size: 14px;
+}
+
+.delete-button {
+    background-color: white;
+    border: 0;
+    margin: 10px;
+    outline: 0;
+    cursor: pointer;
+    font-size: 16px;
 }

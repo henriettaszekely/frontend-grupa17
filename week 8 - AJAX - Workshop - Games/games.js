@@ -1,20 +1,38 @@
 const baseUrl = 'https://games-world.herokuapp.com/games';
 
 function getGames() {
+    showLoader();
     fetch(baseUrl, { method: 'GET' })
-        .then(function (response) {
-            if (response.status === 404) {
-                displayError("Game not found!");
-            } else if (response.status === 500) {
-                displayError("Something went wrong!Plese try again!");
-            } else if (response.status === 200) {
-                return response.json();
-            }
-        }).then(function (parsedResponse) {
-            parsedResponse.forEach(function (item) {
-                displayGame(item);
-            });
+        .then(handleResponse)
+        .then(function (parsedResponse) {
+            parsedResponse.forEach(displayGame);
+        })
+        .catch(displayError)
+        .finally(hideLoader);
+}
+
+function deleteGame(id) {
+    fetch(baseUrl + "/" + id, { method: 'DELETE' })
+        .then(handleResponse)
+        .then(function (parsedResponse) {
+            console.log(parsedResponse);
         });
+}
+
+
+function handleResponse(response) {
+    if (response.status === 404 || response.status === 400) {
+        throw Error("Game not found!");
+    } else if (response.status === 500) {
+        throw Error("Something went wrong!Plese try again!");
+    } else if (response.status === 200) {
+        var contentType = response.headers.get('Content-Type');
+        if (contentType.includes('text/html')) {
+            return response.text();
+        } else {
+            return response.json();
+        }
+    }
 }
 
 function displayError(message) {
@@ -39,7 +57,17 @@ function displayGame(game) {
         <p>${game.description}</p>
     `;
 
-    gameCard.append(gameImage, gameInfo);
+    var deleteButton = document.createElement('button');
+    deleteButton.classList.add("far", "fa-trash-alt", "delete-button");
+
+    deleteButton.addEventListener('click', function (event) {
+        // delete the game from the server
+        deleteGame(game._id);
+
+        // remove the element from the HTML
+        event.target.parentElement.remove();
+    });
+    gameCard.append(gameImage, gameInfo, deleteButton);
 
     document.getElementById("gamesContainer").appendChild(gameCard);
 
@@ -56,6 +84,16 @@ function includeHTML(destinationElement) {
         .then(function (html) {
             destinationElement.innerHTML = html;
         });
+}
+
+function showLoader() {
+    var loader = document.getElementById('appLoader');
+    loader.style.display = 'block';
+}
+
+function hideLoader() {
+    var loader = document.getElementById("appLoader");
+    loader.style.display = 'none';
 }
 
 window.addEventListener("load", function () {

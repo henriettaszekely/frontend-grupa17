@@ -11,6 +11,7 @@
     right: 0;
     /* 100 view height divided by 2 is the middle of the screen, -60px is the half of the elements height*/
     top: calc((100vh)/2 - 60px);
+
     /* @keyframes | duration | timing-function | iteration-count */
     animation: spin 2s linear infinite;
     display: none;
