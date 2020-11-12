@@ -1,0 +1,72 @@
+<!-- Modal -->
+<div id="createGameModal">
+    <div class="modal-header">
+        <span>Create game</span>
+        <i class="fas fa-times close"></i>
+    </div>
+    <div class="modal-body">
+        <form id="createGameForm">
+            <!-- Text input-->
+            <div class="form-group">
+                <div>
+                    <label class="control-label" for="gameTitle">Title</label>
+                    <input class="form-control" type="text" placeholder="Title" name='title' id="gameTitle">
+                </div>
+                <p class="error">* This field is required</p>
+            </div>
+
+            <!-- Text area-->
+            <div class="form-group">
+                <div>
+                    <label class="control-label" for="gameDescription">Description</label>
+                    <textarea class="form-control" placeholder="Description" name="description" id="gameDescription"
+                        rows="5" cols="40"></textarea>
+                </div>
+                <p class="error">* This field is required</p>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <div>
+                    <label class="control-label" for="gameImageUrl">Image url</label>
+                    <input class="form-control" type="text" placeholder="Image url" name="imageUrl" id="gameImageUrl">
+                </div>
+                <p class="error">* This field is required</p>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <div>
+                    <label class="control-label" for="gameImageUrl">Publisher</label>
+                    <input class="form-control" type="text" placeholder="Publisher" name="publisher" id="gamePublisher">
+                </div>
+                <p class="error">* This field is required</p>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <div>
+                    <label class="control-label" for="gameGenre">Genre</label>
+                    <input class="form-control" type="text" placeholder="Genre" name="genre" id="gameGenre">
+                </div>
+                <p class="error">* This field is required</p>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <div>
+                    <label class="control-label" for="gameReleaseDate">Release date</label>
+                    <input class="form-control" type="date" placeholder="Release date" name="releaseDate"
+                        id="gameReleaseDate">
+                </div>
+                <p class="error">* This field is required</p>
+
+            </div>
+            <!-- Buttons input-->
+            <div class="form-buttons">
+                <button type="button" class="button button-cancel close">Cancel</button>
+                <button type="button" class="button button-save" id="saveButton">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -33,6 +33,7 @@ function displayGame(game) {
     gameInfo.classList.add("game-info");
     // gameInfo.innerHTML = "<h3>" + game.title + "</h3>" + "<p>" + game.description + "</p>";
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
     gameInfo.innerHTML = `
         <h3>${game.title}</h3>
         <p>${game.description}</p>
@@ -42,6 +43,19 @@ function displayGame(game) {
 
     document.getElementById("gamesContainer").appendChild(gameCard);
 
+}
+
+// fetches an HTML file and inserts it to a destination elemnet
+function includeHTML(destinationElement) {
+    const link = destinationElement.dataset.content;
+
+    fetch(link)
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (html) {
+            destinationElement.innerHTML = html;
+        });
 }
 
 window.addEventListener("load", function () {

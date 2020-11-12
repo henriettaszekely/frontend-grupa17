@@ -5,9 +5,15 @@
     width: 120px;
     height: 120px;
     position: fixed;
+    margin: auto;
+    /* left:0; and rigth:0; needed for margin: auto to work on positioned elements*/
     left: 0;
     right: 0;
-    margin: 50px auto;
+    /* 100 view height divided by 2 is the middle of the screen, -60px is the half of the elements height*/
+    top: calc((100vh)/2 - 60px);
+    z-index: 2;
+
+    /* @keyframes | duration | timing-function | iteration-count */
     animation: spin 2s linear infinite;
 
     display: none;
