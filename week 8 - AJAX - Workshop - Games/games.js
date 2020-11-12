@@ -26,6 +26,8 @@ function handleResponse(response) {
     } else if (response.status === 500) {
         throw Error("Something went wrong!Plese try again!");
     } else if (response.status === 200) {
+
+        // get the Content-Type header
         var contentType = response.headers.get('Content-Type');
         if (contentType.includes('text/html')) {
             return response.text();
