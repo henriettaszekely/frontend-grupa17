@@ -20,6 +20,36 @@ function deleteGame(id) {
 }
 
 
+function getFormData() {
+    var inputsList = document.querySelectorAll("#createGameForm .form-control");
+
+    var formData = {};
+
+    for (input of inputsList) {
+        formData[input.name] = input.value;
+    }
+
+    console.log(formData);
+    return formData;
+}
+
+
+function createGame() {
+
+    var gameData = getFormData();
+    var formatedData = new URLSearchParams(gameData);
+
+    fetch(baseUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formatedData
+    }).then(handleResponse)
+        .then(displayGame)
+}
+
+
 function handleResponse(response) {
     if (response.status === 404 || response.status === 400) {
         throw Error("Game not found!");
@@ -71,7 +101,7 @@ function displayGame(game) {
     });
     gameCard.append(gameImage, gameInfo, deleteButton);
 
-    document.getElementById("gamesContainer").appendChild(gameCard);
+    document.getElementById("gamesContainer").prepend(gameCard);
 
 }
 
@@ -79,7 +109,7 @@ function displayGame(game) {
 function includeHTML(destinationElement) {
     const link = destinationElement.dataset.content;
 
-    fetch(link)
+    return fetch(link)
         .then(function (response) {
             return response.text();
         })
@@ -98,7 +128,34 @@ function hideLoader() {
     loader.style.display = 'none';
 }
 
+function displayModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "block";
+}
+
+function hideModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
+
 window.addEventListener("load", function () {
+    var modalSection = document.getElementById("modal");
+    includeHTML(modalSection).then(() => {
+        var closeButtons = document.getElementsByClassName("close");
+
+        for (button of closeButtons) {
+            console.log(button);
+            button.onclick = hideModal;
+        }
+
+        var saveButton = document.getElementById("saveButton");
+        saveButton.onclick = createGame;
+
+    });
+
+    var createButton = document.getElementById("createButton");
+    createButton.onclick = displayModal;
+
     getGames();
 });
 

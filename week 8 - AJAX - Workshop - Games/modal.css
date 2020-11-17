@@ -8,6 +8,7 @@
     padding: 16px;
     border-radius: 10px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
     display: none;
 }
 
@@ -67,7 +68,7 @@
     float: right;
 }
 
-button {
+.modal button {
     border-radius: 4px;
     color: white;
     border: 0;

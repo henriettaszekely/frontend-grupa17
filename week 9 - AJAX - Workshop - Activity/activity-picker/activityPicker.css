@@ -1,0 +1,107 @@
+body {
+    font-family: Optima, sans-serif;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters {
+    padding: 10px 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    display: flex;
+}
+
+.activity {
+    padding: 10px 40px;
+    color: rgb(233, 174, 27);
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+
+.card {
+    min-width: 180px;
+    min-height: 80px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin: 20px;
+    height: fit-content;
+}
+
+.card-title {
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    padding: 10px;
+}
+
+.card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input[type=number] {
+    width: 50px;
+    margin: 0 5px;
+}
+
+button {
+    border-radius: 20px;
+    background-color: rgb(233, 174, 27);
+    color: white;
+    padding: 10px;
+    border: 0;
+    appearance: none;
+    outline: none;
+    height: fit-content;
+    align-self: center;
+}
+
+.loader {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(233, 174, 27);
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

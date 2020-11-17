@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="activtyPicker.js"></script>
+    <link rel="stylesheet" href="activityPicker.css">
+</head>
+
+<body>
+    <div class="loader"></div>
+
+    <div class="flex-container">
+        <div class="filters">
+            <h3>Filters</h3>
+
+            <div class="card">
+                <div class="card-title">Type</div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="radio" name="typeFilter" value="education">
+                        <label>Education</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="typeFilter" value="recreational">
+                        <label>Recreational</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="typeFilter" value="social">
+                        <label>Social</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="typeFilter" value="diy">
+                        <label>DIY</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="typeFilter" value="cooking">
+                        <label>Cooking</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="typeFilter" value="relaxaion">
+                        <label>Relaxation</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="typeFilter" value="music">
+                        <label>Music</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="typeFilter" value="busywork">
+                        <label>Busywork</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Participants</div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label>Participants</label>
+                        <input type="number" class="input" id="participantsFilter" placeholder="1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Price</div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label>Min price</label>
+                        <input type="number" class="input" id="minPriceFilter" placeholder="0">
+                    </div>
+                    <div class="input-group">
+                        <label>Max price</label>
+                        <input type="number" class="input" id="maxPriceFilter" placeholder="1">
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="activity-button">Find activity</button>
+        </div>
+
+
+        <div>
+            <h3>Activity</h3>
+            <div id="activity" class="activity"></div>
+            <div id="errorDiv"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
