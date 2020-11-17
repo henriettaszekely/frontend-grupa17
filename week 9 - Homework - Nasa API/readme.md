@@ -4,7 +4,7 @@ Go to the Nasa Api website https://api.nasa.gov/, access the Browse APIs section
 Details: 
 1. Generate an API Key on there website: https://api.nasa.gov/
 
-2. Study how the APOD API work, using Postman, check the response for the valid and invalid dates.
+2. Study how the APOD API works, using Postman, check the response for the valid and invalid dates.
 
 3. Implement the UI from the attached screenshots: add the page title and logo, add a input type="date" to select the date, and a "See picture" button.
 
