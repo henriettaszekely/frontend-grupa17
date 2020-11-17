@@ -21,7 +21,8 @@ Details:
 
 6. Pay attiontion to the error handling. As you saw when you played with the API when you send a future date to the server it sends a response which contains a "code" and "msg", check if the response has the code property in that case throw an error with the recieved message. Also some dates don't have an image they have video or another type of media. Therefore after getting the parsed response check the respon's "media_type" property to see if it is an image, otherwise throw an error to inform the user. 
 
-7. As you saw this API works with query parameters you will need to use the JavaScript's URL object to be able to easily set query parameters or search parameters. Check the links below.
+7. As you saw this API works with query parameters you will need to use the JavaScript's URL object to be able to easily set query parameters or search parameters. Check the links below:
+
     https://developer.mozilla.org/en-US/docs/Web/API/URL
     
     https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
