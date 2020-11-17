@@ -13,7 +13,9 @@ Details:
 4. Before making a request to the server hide the previouse picture and show a loader, after receiving the response add display and display the image add an event listener to the image "load" event, only after the image is loaded display the image, its title and hide the loader.
 
 5. Format the title text based on the date: if the response's date is equal to today's date display: "Today's picture: " otherwise display the response's date concatenated with "picture: " and folowed by the title from the response. You will need to use JavaScripts Date object and its getFullYear(), getMonth(), getDate() methods to be able to compare the dates.
+
     https://www.w3schools.com/js/js_dates.asp
+    
     https://www.w3schools.com/js/js_date_methods.asp
 
 
@@ -21,6 +23,8 @@ Details:
 
 7. As you saw this API works with query parameters you will need to use the JavaScript's URL object to be able to easily set query parameters or search parameters. Check the links below.
     https://developer.mozilla.org/en-US/docs/Web/API/URL
+    
     https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+    
     https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/set
 
