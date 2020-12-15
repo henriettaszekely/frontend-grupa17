@@ -22,7 +22,7 @@ Provide a link to the game rules, so that the user can understand what game he's
 If you deviate from the rules of a certain game, or you invent others, make sure the rules are visible to the user. 
 
 Make sure to use the ES6 syntax elements(if needed):
-* let, const instead of war
+* let, const instead of var
 * arrow functions
 * class syntax
 * rest parameters, spread operator
