@@ -27,5 +27,6 @@ Make sure to use the ES6 syntax elements(if needed):
 * class syntax
 * rest parameters, spread operator
 * destructuring
+* async/await
 * modules
 * etc.
