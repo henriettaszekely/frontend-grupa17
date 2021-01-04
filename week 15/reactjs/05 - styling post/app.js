@@ -1,8 +1,17 @@
 // 5. Styling post 
 function Post(props) {
+  const styleH2 = {
+    backgroundColor: 'white',
+    fontSize: '16px',
+  }
+
+  if (props.title == 'Post 1') {
+    styleH2.color = "red";
+  }
+
   return (
     <div className="post">
-      <h2>{props.title}</h2>
+      <h2 style={styleH2}>{props.title}</h2>
       <p>{props.content}</p>
     </div>
   )
