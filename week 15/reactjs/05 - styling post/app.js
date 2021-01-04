@@ -18,9 +18,10 @@ function Post(props) {
 }
 
 // Atributele se trimit intr-un obiect props la functia de la sus
+let title1 = "Post 1";
 let App = (
   <div>
-    <Post title="Post 1" content="Continut 1" />
+    <Post title={title1} content="Continut 1" />
     <Post title="Post 2" content="Continut 2" />
     <Post title="Post 3" content="Continut 3" />
     <Post title="Invat React" content="Continut 4" />
