@@ -1,5 +1,4 @@
 // 9. State - Counter
-
 class CounterApp extends React.Component {
   constructor(props) {
     super(props);
