@@ -10,6 +10,7 @@
 10. Show list of post - State vs props https://reactjs.org/docs/faq-state.html#what-is-the-difference-between-state-and-props
 11. React Developer Tools
 12. Life cycle of components https://reactjs.org/docs/state-and-lifecycle.html
+13. React Ecosystem
 
 Bonus: How we can implement your react - https://github.com/ilazar/my-react
 
