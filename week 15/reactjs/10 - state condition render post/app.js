@@ -1,17 +1,13 @@
 // 10. Render condition post
-// Sa adaugam un event de on click pe Post
-// In DOM un div are "onclick". Ex: document.createElement('div').onclick = function(){}
-class Post extends React.Component {
+// Lista de posturi si daca dam click pe unul sa schimbam background-ul
+class Post extends React.PureComponent {
   render() {
-    // document.addEventListener('scroll', function(){
-
-    // })
-    console.log(this); // this1
+    console.log('Post.render call');
     return (
-      <div onClick={() => {
-        // this == this1
-        this.props.onPostClick();
-      }}>
+      <div
+        style={{ backgroundColor: this.props.backgroundColor }}
+        onClick={this.props.onPostClick}
+      >
         <h2>{this.props.title}</h2>
         <p>{this.props.content}</p>
       </div>
@@ -20,15 +16,67 @@ class Post extends React.Component {
 }
 
 class App extends React.Component {
-  onPostClick() {
-    console.log('post click');
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      posts: [
+        {
+          title: 'Invat React',
+          content: 'Continut 4',
+          active: false,
+        },
+        {
+          title: 'Post 5',
+          content: 'Continut 5',
+          active: false,
+        },
+        {
+          title: 'Post 6',
+          content: 'Continut 6',
+          active: false,
+        }
+      ]
+    }
+
+  }
+
+  onPostClick(postIndex) {
+    console.log('post index =', postIndex);
+    // pe ce post sa da click
+    // afisam postul pe care sa dat click
+    const newPosts = [...this.state.posts];
+    const post = newPosts[postIndex];
+    // v1
+    // if (post.active) {
+    //   post.active = false;
+    // } else {
+    //   post.active = true;
+    // }
+    // v2
+    post.active = !post.active;
+
+
+    this.setState({ posts: newPosts });
+
+
   }
 
   render() {
     return (
       <div>
-        <Post title="Invat React" content="Continut 4" onPostClick={this.onPostClick} />
-        <Post title="Post 2" content="Continut 2" onPostClick={this.onPostClick} />
+        {this.state.posts
+          .map((postData, index) => (
+            <Post
+              key={index}
+              backgroundColor={postData.active ? 'red' : 'white'}
+              title={postData.title}
+              content={postData.content}
+              onPostClick={() => this.onPostClick(index)}
+            // onPostClick={this.onPostClick(index) /* => undefined */ }
+            />
+          ))
+        }
       </div>
     )
   }
