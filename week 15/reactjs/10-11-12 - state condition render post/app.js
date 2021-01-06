@@ -4,6 +4,7 @@
 // 1. Props se trimite de la parinte - cine foloseste componenta da valori la props
 // 2. Props sunt la fel ca parametri unei functii
 // 3. Prin state facem componenta interactiva
+// 12. React Development tool
 class Post extends React.PureComponent {
   render() {
     console.log('Post.render call');
