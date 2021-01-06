@@ -1,4 +1,4 @@
-// 8. State
+// 10. Render condition post
 // Sa adaugam un event de on click pe Post
 // In DOM un div are "onclick". Ex: document.createElement('div').onclick = function(){}
 class Post extends React.Component {
