@@ -1,21 +1,14 @@
 // 13. Life cycle of components
-class Post extends React.PureComponent {
-
-  componentWillUnmount() {
-    console.log('Post: inaite ca componenta nostra sa dispara')
-  }
-
-  render() {
-    return (
-      <div
-        style={{ backgroundColor: this.props.backgroundColor }}
-      >
-        <h2>{this.props.title}</h2>
-        <p>{this.props.content}</p>
-        <button onClick={this.props.onPostDelete}>Delete</button>
-      </div>
-    )
-  }
+function Post() {
+  return (
+    <div
+      style={{ backgroundColor: this.props.backgroundColor }}
+    >
+      <h2>{this.props.title}</h2>
+      <p>{this.props.content}</p>
+      <button onClick={this.props.onPostDelete}>Delete</button>
+    </div>
+  )
 }
 
 class App extends React.Component {
