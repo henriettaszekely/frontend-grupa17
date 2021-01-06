@@ -1,15 +1,20 @@
 // 10. Render condition post
 // Lista de posturi si daca dam click pe unul sa schimbam background-ul
+// 11. State vs Props
+// 1. Props se trimite de la parinte - cine foloseste componenta da valori la props
+// 2. Props sunt la fel ca parametri unei functii
+// 3. Prin state facem componenta interactiva
 class Post extends React.PureComponent {
   render() {
     console.log('Post.render call');
     return (
       <div
         style={{ backgroundColor: this.props.backgroundColor }}
-        onClick={this.props.onPostClick}
+      // onClick={this.props.onPostClick}
       >
         <h2>{this.props.title}</h2>
         <p>{this.props.content}</p>
+        <button onClick={this.props.onPostDelete}>Delete</button>
       </div>
     )
   }
@@ -55,11 +60,16 @@ class App extends React.Component {
     // }
     // v2
     post.active = !post.active;
+    this.setState({ posts: newPosts });
+  }
 
+  onPostDelete(postIndex) {
+    console.log('delete post index = ', postIndex);
+    const newPosts = [...this.state.posts];
+
+    newPosts.splice(postIndex, 1);
 
     this.setState({ posts: newPosts });
-
-
   }
 
   render() {
@@ -73,6 +83,7 @@ class App extends React.Component {
               title={postData.title}
               content={postData.content}
               onPostClick={() => this.onPostClick(index)}
+              onPostDelete={() => this.onPostDelete(index)}
             // onPostClick={this.onPostClick(index) /* => undefined */ }
             />
           ))
