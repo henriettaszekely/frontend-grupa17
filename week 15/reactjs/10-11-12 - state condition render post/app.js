@@ -5,6 +5,11 @@
 // 2. Props sunt la fel ca parametri unei functii
 // 3. Prin state facem componenta interactiva
 // 12. React Development tool
+
+// v2
+// State vs Props
+// Props = parametru trimisi la o functie . 
+// State = variabila dintr-o functie
 class Post extends React.PureComponent {
   render() {
     console.log('Post.render call');

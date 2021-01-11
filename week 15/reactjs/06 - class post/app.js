@@ -21,10 +21,10 @@ class Post extends React.Component {
 
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.isMyYear = false;
-  // }
+  constructor(props) {
+    super(props);
+    this.isMyYear = false;
+  }
 
   render() {
     console.log(this.props);
