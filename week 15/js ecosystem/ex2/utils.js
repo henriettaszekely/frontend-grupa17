@@ -3,3 +3,10 @@ export function sum(array) {
 }
 
 export const user = { name: 'Razvan' }
+
+
+export class Game {
+  show(){
+    
+  }
+}

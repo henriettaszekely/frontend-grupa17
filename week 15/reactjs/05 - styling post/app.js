@@ -1,7 +1,7 @@
 // 5. Styling post 
 function Post(props) {
   const styleH2 = {
-    backgroundColor: 'white',
+    backgroundColor: 'white', // background-color
     fontSize: '16px',
   }
 
