@@ -6,7 +6,7 @@ Scopul: Sa afisam o lista de jocuri
 3. (optional) Editarea unui Game
 4. (optional) Stergerea unui Game
 
-# Recomandari - dupa modelul facut in versiunea single page app
+# Recomandari 
 
 1. Faceti o componenta App unde tineti lista de games
 2. Folositi state pentru lista de games
