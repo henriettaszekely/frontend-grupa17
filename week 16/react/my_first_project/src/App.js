@@ -1,6 +1,12 @@
 import React from 'react';
 import './App.css';
-
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Game from './rock-paper-game/Game'
 // 1. Props vs State 
 // 1. Props se trimite de la parinte - cine foloseste componenta da valori la props
 // 2. Props sunt la fel ca parametri unei functii
@@ -65,11 +71,29 @@ class PostList extends React.Component { // class component
 
 function App() {
   return (
-    <div className="App">
-      <PostList />
-      <MyButton />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact>
+            <PostList />
+            <MyButton />
+          </Route>
+          <Route path="/home">
+            <div>Sunt pe home page</div>
+          </Route>
+          <Route path="/about">
+            <div>Sunt pe about page</div>
+          </Route>
+          <Route path="/game">
+            <Game />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
-
+// switch(){
+//   case '/': return 1
+//   case '/user': return 2
+// }
 export default App;
