@@ -5,3 +5,5 @@
 var moment = require('moment');
 
 console.log(moment().format());
+
+module.exports = { a: 1 }

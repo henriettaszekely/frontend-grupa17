@@ -1,12 +1,19 @@
+const user = { name: 'Razvan' }
+
+
 export function sum(array) {
+
+  show(user)
   return array.reduce((acc, el) => acc + el, 0)
 }
 
-export const user = { name: 'Razvan' }
+function show(msg) {
+  console.log(msg);
+}
 
 
-export class Game {
-  show(){
-    
+class Game {
+  show() {
+
   }
 }
