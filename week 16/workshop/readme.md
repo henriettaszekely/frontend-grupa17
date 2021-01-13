@@ -1,6 +1,6 @@
 
 Rock Paper : https://github.com/razvantimis/g17-rock-paper-scissors/tree/main/
-
+Player game : https://github.com/razvantimis/g17-theplayer/tree/main/
 # Workshop - Player game - React JS
 
 Cerinte:
