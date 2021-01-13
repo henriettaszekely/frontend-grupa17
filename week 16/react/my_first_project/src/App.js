@@ -73,13 +73,21 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/game">Game</Link>
+          </li>
+        </ul>
         <Switch>
           <Route path="/" exact>
             <PostList />
             <MyButton />
-          </Route>
-          <Route path="/home">
-            <div>Sunt pe home page</div>
           </Route>
           <Route path="/about">
             <div>Sunt pe about page</div>
