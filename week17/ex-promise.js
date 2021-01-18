@@ -32,4 +32,17 @@ start();
 
 
 
+function asyncFunc() {
+  // lipseste return
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve('DONE'), 100)
+  })
+}
+
+async function start() {
+  const result = await asyncFunc();
+  console.log('Result: ', result);
+}
+
+
 
