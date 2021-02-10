@@ -6,6 +6,7 @@
 
 // Se ocupa de cautare pe backend ( doar face requestul)
 // returneaza o lista de filme
+
 // Ex: filters = { title: 'test'}
 // Nu afiseaza nimic in UI ( nu folose document.createElement)
 function searchMoviesApi(filters) {
